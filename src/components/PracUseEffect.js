@@ -5,6 +5,7 @@ function PracUseEffect(props){
     const [count, setCount] = useState(0);
     const [width, setWidth] = useState(window.innerWidth);
     const [height, setHeight] = useState(window.innerHeight);
+    const [time, setTime] = useState(new Date());
 
     useEffect(() => {
         document.title = `Count: ${count}`;
@@ -32,18 +33,47 @@ function PracUseEffect(props){
         setHeight(window.innerHeight);
     }
 
+    useEffect(() => {
+        const interValId = setInterval(() => {
+            setTime(new Date());
+        }, 1000);
+
+        return() => {
+            clearInterval(interValId);
+        }
+    }, []);
+
+    function formatTime(){
+        let hours = time.getHours();
+        const minutes = time.getMinutes();
+        const seconds = time.getSeconds();
+        const meridiem = hours >= 12 ? "PM" : "AM";
+
+        hours = hours % 12 || 12;
+
+        return `${padZero(hours)}:${padZero(minutes)}:${padZero(seconds)} ${meridiem}`;
+    }
+
+    function padZero(number){
+        return (number < 10 ? "0" : "") + number;
+    }
+
     return (
         <>
             <h5 className="mb-5">{props.title}</h5>
             <div className="container">
                 <div className="row">
-                    <div className="col-md-6">
+                    <div className="col-md-4">
                         <h5>Count: {count}</h5>
                         <button onClick={countBtn}>SUBMIT</button>
                     </div>
-                    <div className="col-md-6">
+                    <div className="col-md-4">
                         <p>Window Width: {width}</p>
                         <p>Window Height: {height}</p>
+                    </div>
+                    <div className="col-md-4">
+                        <p><strong>Digital Clock</strong></p>
+                        <span style={{background: "red", padding: "5px 10px", fontWeight: "bold", fontSize: "20px", color: "white"}}>{formatTime()}</span>
                     </div>
                 </div>
             </div>
