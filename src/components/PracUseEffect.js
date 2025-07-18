@@ -7,7 +7,7 @@ function PracUseEffect(props){
     const [height, setHeight] = useState(window.innerHeight);
 
     useEffect(() => {
-        document.title = `Current Count: ${count}`;
+        document.title = `Count: ${count}`;
     }, [])
 
     const countBtn = () => {
@@ -16,10 +16,16 @@ function PracUseEffect(props){
 
     useEffect(() => {
         window.addEventListener("resize", handleResize);
+        console.log("Event listener added");
         return () => {
             window.removeEventListener("resize", handleResize);
+            console.log("Event listener added");
         };
     }, []);
+
+    // useEffect(() => {
+    //     document.title = `Size: ${width} x ${height}`;
+    // }, []);
 
     const handleResize = () => {
         setWidth(window.innerWidth);
