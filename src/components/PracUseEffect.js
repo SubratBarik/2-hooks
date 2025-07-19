@@ -60,7 +60,8 @@ function PracUseEffect(props){
 
     return (
         <>
-            <h5 className="mb-5">{props.title}</h5>
+            <h5 className="mt-5">{props.title}</h5>
+            <hr />
             <div className="container">
                 <div className="row">
                     <div className="col-md-4">

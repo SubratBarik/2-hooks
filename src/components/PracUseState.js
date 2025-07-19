@@ -33,7 +33,8 @@ function PracUseState(props) {
 
     return (
         <>
-            <h5 className="mb-5">{props.title}</h5>
+            <h5 className="mt-5">{props.title}</h5>
+            <hr />
             <div className="container">
                 <div className="row">
                     <div className="col-md-6 mb-5">
@@ -44,11 +45,11 @@ function PracUseState(props) {
                         <h3>Age: {age}</h3>
                         <button onClick={updateAge}>Set Age</button>
                     </div>
-                    <div className="col-md-6 mb-5">
+                    <div className="col-md-6 mb-2">
                         <h3>Is Employed: {isEmployed ? "Yes" : "No"}</h3>
                         <button onClick={updateEmployment}>Set Employment</button>
                     </div>
-                    <div className="col-md-6 mb-5">
+                    <div className="col-md-6 mb-2">
                         <h3>Counter: {count}</h3>
                         <button onClick={incrementCount} className="mx-2">Increment</button>
                         <button onClick={decrementCount}>Decrement</button>
