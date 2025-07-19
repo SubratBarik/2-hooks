@@ -1,3 +1,5 @@
+//useState() => It is a hook that allows you to add state to functional components in React. It returns an array with two elements: the current state value and a function to update that state value. When the state is updated, the component re-renders with the new state value.
+
 import React, { useState } from "react";
 
 function PracUseState(props) {

@@ -1,3 +1,5 @@
+//useContext() => It allows you to share the  value of a variable across the entire component tree without having to pass props down manually at every level. It is used to avoid prop drilling.
+
 import React from 'react';
 
 function PracUseContext(props){

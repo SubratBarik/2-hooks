@@ -1,3 +1,5 @@
+//useEffect() => It is a hook that allows you to perform side effects in function components. It can be used for data fetching, subscriptions, or manually changing the DOM in React components. It runs after every render by default, but you can control when it runs by passing a dependency array.
+
 import React, {useState, useEffect} from "react";
 
 function PracUseEffect(props){
