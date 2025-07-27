@@ -2,7 +2,7 @@
 
 //Provider - PracUseContext.js`
 //1. import {createContext} from 'react';
-//2. const MyContext = createContext();
+//2. export const MyContext = createContext();
 //3. <MyContext.Provider value={/* some value */}>...</MyContext.Provider>
 //4. const value = useContext(MyContext);
 

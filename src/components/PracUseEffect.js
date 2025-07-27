@@ -11,7 +11,7 @@ function PracUseEffect(props){
 
     useEffect(() => {
         document.title = `Count: ${count}`;
-    }, [])
+    }) // use ,[] to render it only once
 
     const countBtn = () => {
         setCount(count+1);
