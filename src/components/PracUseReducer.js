@@ -1,15 +1,15 @@
 import React, { useReducer } from 'react';
 
-interface State {
+interface State { //used in tsx
     count: Number;
     error: string | null;
 }
 
-interface Action {
+interface Action { //used in tsx
     type: 'increment' | 'decrement';
 }
 
-function reducer(state: State, action: Action) {
+function reducer(state: State, action: Action) { //used in tsx
   const { type } = action;
 
   switch (type) {
