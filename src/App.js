@@ -3,6 +3,7 @@
 import PracUseEffect from "./components/PracUseEffect";
 import PracUseState from "./components/PracUseState";
 import PracUseContext from "./components/PracUseContext";
+import PracUseReducer from "./components/PracUseReducer";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
             <PracUseState title="useState Hook"/>
             <PracUseEffect title="useEffect Hook"/>
             <PracUseContext title="useContext Hook"/>
+            <PracUseReducer title="useReducer Hook"/>
           </div>
         </div>
       </div>      
